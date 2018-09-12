@@ -23,7 +23,6 @@
 		<p><input type="submit" /></p>
 	</form>
  
-
 	<?php echo phpinfo(); ?>
 
 	</body>
