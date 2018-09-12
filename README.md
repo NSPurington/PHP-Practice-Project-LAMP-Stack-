@@ -11,3 +11,5 @@ Basic PHP intro code practice
 # action.php
 Contains results of field entries from hello.php
 
+# db_login.php
+Establishes a connection to mysql database, and builds necessary tables for front-end interface
