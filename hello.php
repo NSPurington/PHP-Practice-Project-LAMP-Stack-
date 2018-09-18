@@ -1,3 +1,9 @@
+<?php
+session_start();
+$_SESSION["username"]="Nick Purington (session)";
+setcookie("username", "Nick Purington (cookie)", time()+3600);
+?>
+
 <html>
 	<head>
 		<title>PHP Test</title>
@@ -10,7 +16,6 @@
 	<h2>Browser Test in PHP</h2>
         <hr>
 	<?php echo $_SERVER['HTTP_USER_AGENT']; ?>
-
 	<?php
 	if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE) {
 	?>
@@ -93,5 +98,27 @@
 	echo "Hi ",$value,"!","<br/>";
 	}
 	?> 
+	<br>
+	<br>
+        <h2>Array Test in PHP</h2>
+        <hr>
+	<?php
+	$names=array("Nick","Amy","Eleanor","Hank");
+	echo "My family consists of ",$names[0],", ",$names[1],", ",$names[2],", and ",$names[3];
+	?> 
+	<br>
+	<br>
+        <h2>Session Data Test in PHP</h2>
+        <hr>
+	<?php
+	echo "Session Username = ", $_SESSION["username"];
+	?>
+	<br>
+	<br>
+        <h2>Cookie Data Test in PHP</h2>
+        <hr>
+	<?php
+	echo "Cookie Username = ", $_COOKIE["username"];
+	?>
 	</body>
 </html>
